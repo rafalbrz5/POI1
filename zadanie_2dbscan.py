@@ -71,17 +71,14 @@ cylinder_points_1 = load_point_cloud("cylinder_points.xyz")
 cylinder_points_2 = load_point_cloud("cylinder_points.xyz")
 cylinder_points_3 = load_point_cloud("cylinder_points.xyz")
 
-# Płaszczyzna pionowa
 print_orientation_pyransac("Płaszczyzna pionowa 1", plane_vertical_points_1)
 print_orientation_pyransac("Płaszczyzna pionowa 2", plane_vertical_points_2)
 print_orientation_pyransac("Płaszczyzna pionowa 3", plane_vertical_points_3)
 
-# Płaszczyzna pozioma
 print_orientation_pyransac("Płaszczyzna pozioma 1", plane_horizontal_points_1)
 print_orientation_pyransac("Płaszczyzna pozioma 2", plane_horizontal_points_2)
 print_orientation_pyransac("Płaszczyzna pozioma 3", plane_horizontal_points_3)
 
-# Płaszczyzna cylindryczna
 print_orientation_pyransac("Płaszczyzna cylindryczna 1", cylinder_points_1)
 print_orientation_pyransac("Płaszczyzna cylindryczna 2", cylinder_points_2)
 print_orientation_pyransac("Płaszczyzna cylindryczna 3", cylinder_points_3)
