@@ -49,11 +49,9 @@ def k_means(points, k, iterations=100):
     centroids = points[np.random.choice(len(points), k, replace=False)]
 
     for _ in range(iterations):
-        # Przypisz punkty do najbliższego centroida
         distances = np.linalg.norm(points[:, None] - centroids, axis=2)
         labels = np.argmin(distances, axis=1)
 
-        # Zaktualizuj centroidy
         for i in range(k):
             centroids[i] = np.mean(points[labels == i], axis=0)
 
@@ -65,7 +63,7 @@ plane_horizontal_points = load_point_cloud("plane_horizontal_points.xyz")
 cylinder_points = load_point_cloud("cylinder_points.xyz")
 
 # Znajdź rozłączne chmury punktów za pomocą algorytmu k-średnich
-k = 3  # Liczba klastrów (3 przypadki)
+k = 3 
 centroids_v, labels_v = k_means(plane_vertical_points, k)
 centroids_h, labels_h = k_means(plane_horizontal_points, k)
 centroids_c, labels_c = k_means(cylinder_points, k)
@@ -86,11 +84,8 @@ def print_orientation(plane_name, points, labels):
         print()
 
 
-# Płaszczyzna pionowa
 print_orientation("Płaszczyzna pionowa", plane_vertical_points, labels_v)
 
-# Płaszczyzna pozioma
 print_orientation("Płaszczyzna pozioma", plane_horizontal_points, labels_h)
 
-# Płaszczyzna cylindryczna
 print_orientation("Płaszczyzna cylindryczna", cylinder_points, labels_c)
