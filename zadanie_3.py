@@ -84,8 +84,8 @@ def classify_features(features_file, test_size=0.2):
     accuracy = accuracy_score(y_test, y_pred)
     print("Dokładność klasyfikatora:", accuracy)
 
-input_dir = r'C:\Users\Dell T3500\Desktop\struktury'  # Katalog z oryginalnymi obrazami
-output_dir = r'C:\Users\Dell T3500\Desktop\wycinki'  # Katalog, w którym zostaną zapisane wycinki
+input_dir = r'C:\Users\Dell T3500\Desktop\struktury'  
+output_dir = r'C:\Users\Dell T3500\Desktop\wycinki' 
 features_file = 'texture_features.csv'
 
 sample_size = (128, 128)
